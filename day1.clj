@@ -15,11 +15,11 @@
 (def first-result
   (count-increases input))
 
-first-result
+(println "First result: " first-result)
 
 (def second-result
   (->> (partition 3 1 input)
        (map (fn [triple] (apply + triple)))
        count-increases))
 
-second-result
+(println "Second result: " second-result)
